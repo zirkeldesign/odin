@@ -10,5 +10,11 @@ class CrawledPage extends Model
 
     protected $casts = [
         'website_id' => 'int',
+        'found_on' => 'array',
     ];
+
+    public function website()
+    {
+        return $this->belongsTo(Website::class);
+    }
 }
